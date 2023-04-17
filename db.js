@@ -5,8 +5,8 @@ const db = require('mysql')
 // user is the user your app is logging on to
 // default port is 3306
 const connection = db.createConnection({
-    host: '127.0.0.1',
-    user: 'root',
+    host: process.env.MYSQL_HOST,
+    user: process.env.USER,
     password: process.env.MYSQL_PW,
     database: 'test_mysql'
 })
